@@ -1,9 +1,7 @@
 .modal {
   background-color: white;
-  box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 1);
-  border: 1.5px solid rgba(9, 45, 132, 1);
   border-radius: 5%;
-  width: 75vw;
+  width: 50vw;
   height: 75vh;
   text-align: left;
   padding: 25px 25px 50px;

@@ -19,11 +19,12 @@
 }
 
 .title {
-  box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 1);
+  box-shadow: 10px 10px rgba(255, 255, 255, 1);
   color: white;
-  height: 80px;
-  width: 100px;
+  height: 70px;
+  width: 90px;
   padding: 20%;
+  font-size: large;
   padding-top: 75px;
   text-align: center;
   border-radius: 10%;
