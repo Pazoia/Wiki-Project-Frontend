@@ -1,0 +1,9 @@
+.edit-text-area {
+  width: 55vw;
+  max-width: 55vw;
+  height: 80%;
+  max-height: 80%;
+  border: 1.5px solid rgba(9, 45, 132, 1);
+  border-style: dashed;
+  padding: 15px;
+}

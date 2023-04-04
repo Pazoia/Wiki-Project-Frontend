@@ -1,0 +1,12 @@
+.modal-options {
+  border: 1px solid rgba(9, 45, 132, 1);
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.modal-options:hover {
+  color: white;
+  background-color: rgba(9, 45, 132, 1);
+}

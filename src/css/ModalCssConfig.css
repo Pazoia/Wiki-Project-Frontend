@@ -1,0 +1,33 @@
+.modal {
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 1);
+  border: 1.5px solid rgba(9, 45, 132, 1);
+  border-radius: 5%;
+  width: 75vw;
+  height: 75vh;
+  text-align: left;
+  padding: 25px 25px 50px;
+  margin-top: 25px;
+  white-space: pre-line;
+}
+
+.modal-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.model-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  column-gap: 20px;
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  .model-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 10px;
+    float: right;  
+  }
+}
