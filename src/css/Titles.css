@@ -19,7 +19,7 @@
 }
 
 .title {
-  box-shadow: 10px 10px rgba(255, 255, 255, 1);
+  box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 1);
   color: white;
   height: 70px;
   width: 90px;

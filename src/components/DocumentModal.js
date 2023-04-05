@@ -45,7 +45,7 @@ export const DocumentModal = ({
         <Modal.Header>
           <h1>{title}</h1>
         </Modal.Header>
-        <Modal.Body className="modal-body">{documentData}</Modal.Body>
+        <Modal.Body className="document-modal-body">{documentData}</Modal.Body>
         <Modal.Footer>
           <div className="creation-timestamp">
             <p>Document creation date and time: </p>

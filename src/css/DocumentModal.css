@@ -1,6 +1,5 @@
-.modal-body {
+.document-modal-body {
   border: 1.5px solid rgba(9, 45, 132, 1);
-  /* border-radius: 5%; */
   padding: 15px;
   height: 50vh;
   overflow-y: scroll;

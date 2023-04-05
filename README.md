@@ -30,8 +30,9 @@ Please follow the requirements below:
 
 - 🚀 In the latest document revision popup window, there will be an `Edit Document` option that will allow the user to submit a new document revision for the selected title.  
   This will hit endpoint: `POST /documents/<title>`
+- 🚀 Open a new modal with editable text with the options to save or cancel.
 
-- Open model with message returned from save button
+- 🚀 Open model with message returned from save button
 
 **_Home page form_**
 
@@ -100,6 +101,7 @@ $ yarn start
 - ✅ User has the option to click on a title, this will hit endpoint: `GET /documents/<title>/latest` and will return a Model displaying the latest document revision.
 - ✅ In the latest document revision popup window, there will be an `Edit Document` option that will allow the user to submit a new document revision for the selected title.  
   This will hit endpoint: `POST /documents/<title>`
-- Open model with message returned from save button
+- ✅ Open a new modal with editable text with the options to save or cancel.
+- ✅ Open model with message returned from save button
 
 > Done

@@ -1,6 +1,12 @@
+.edit-document-modal-body {
+  border: 1.5px solid rgba(9, 45, 132, 1);
+  padding: 15px;
+  height: 50vh;
+}
+
 .edit-text-area {
   width: 90%;
-  max-width: 90%;
+  max-width: 95%;
   height: 80%;
   max-height: 80%;
   border: 1.5px solid rgba(9, 45, 132, 1);

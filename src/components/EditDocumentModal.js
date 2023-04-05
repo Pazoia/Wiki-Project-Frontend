@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Modal } from "react-bootstrap";
 
 import { Button } from "./Button";
@@ -9,8 +9,9 @@ import "../css/EditDocumentModal.css"
 export const EditDocumentModal = ({
   showEditDocumentModal,
   selectedDocument,
-  handleDocumentModal,
-  handleEditDocumentModal
+  saveConfirmationModalSettings,
+  handleEditDocumentModal,
+  handleConfirmationModal
 }) => {
 
   const documentDataRef = useRef();
@@ -18,22 +19,29 @@ export const EditDocumentModal = ({
   const documentData = selectedDocument[2];
 
   const saveNewDocumentData = async () => {
+    
     const newDocumentData = {
       "content": documentDataRef.current.value,
     };
     if (documentData === newDocumentData.content) {
-      console.log("No changes detected!");
+      console.log(`No changes detected in new content for title: ${title}`);
+      const text = `No changes detected in new content for title: ${title}`;
+      const type = "Alert";
+      saveConfirmationModalSettings(text, type);
     } else {
       await fetch(`/documents/${title}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify(newDocumentData)
-      }).then((res) => res.json()
-      ).then((post) => console.log(post.message)
-      ).catch((err) => {
-        console.log(err.message);
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify(newDocumentData)
+        }).then((res) => res.json()
+        ).then((post) => {
+          const text = post.message;
+          const type = "Success";
+          saveConfirmationModalSettings(text, type);
+        }).catch((err) => {
+          console.log(err.message);
       });
     }
   };
@@ -47,10 +55,8 @@ export const EditDocumentModal = ({
         <Modal.Header>
           <h1>{title}</h1>
         </Modal.Header>
-        <Modal.Body>
-          <div className="edit-document-modal-msg">
-            <p>Edit the document in the box below.</p>
-          </div>
+        <Modal.Body className="edit-document-modal-body">
+          <p>Edit the document in the box below.</p>
           <textarea
             className="edit-text-area"
             defaultValue={documentData}
@@ -65,12 +71,18 @@ export const EditDocumentModal = ({
               buttonText={"Save"}
               onClick={() => {
                 saveNewDocumentData();
+                handleEditDocumentModal();
+                handleConfirmationModal();
               }}
             />
             <Button
               buttonText={"Cancel"}
               onClick={() => {
-                console.log("Canceling editing document");
+                const text = "You cancelled, nothing was changed!";
+                const type = "Alert";
+                saveConfirmationModalSettings(text, type);
+                handleEditDocumentModal();
+                handleConfirmationModal();
               }}
             />
           </div>
