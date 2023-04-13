@@ -22,11 +22,13 @@ Please follow the requirements below:
 **_Home page_**
 
 - 🚀 Home page will hit endpoint: `GET /documents`  
-  🚀 Each available title will be displayed in a box.
+  🚀 Each available title will be displayed in a clickable card.
 
 **_Document Modal_**
 
-- 🚀 User has the option to click on a title, this will hit endpoint: `GET /documents/<title>/latest` and will return a Model with displaying the latest document revision.
+- 🚀 User has the option to click on a title, this will hit endpoint: `GET /documents/<title>/latest` and will return a Model displaying the latest document revision.
+
+**_Edit Document Modal_**
 
 - 🚀 In the latest document revision popup window, there will be an `Edit Document` option that will allow the user to submit a new document revision for the selected title.  
   This will hit endpoint: `POST /documents/<title>`
@@ -44,7 +46,7 @@ Please follow the requirements below:
       - `new title` (can't be empty)
       - `content` (can't be empty)
 
-    This will hit endpoint: `POST /documents/<title>`
+    This will hit endpoint: `POST /documents/new`
 
   - Search for available document revisions for an existing title:
     - Will open popup window with inputs:
@@ -94,7 +96,7 @@ $ yarn start
 **_Home page_**
 
 - ✅ Create a Documents component that will display all the titles coming in to the home page.
-- ✅ Each title will be displayed in a box.
+- ✅ Each title will be displayed in a clickable card.
 
 **_Document Modal_**
 

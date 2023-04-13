@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Modal } from "react-bootstrap";
 
 import { Button } from "./Button";
@@ -23,6 +23,7 @@ export const EditDocumentModal = ({
     const newDocumentData = {
       "content": documentDataRef.current.value,
     };
+
     if (documentData === newDocumentData.content) {
       console.log(`No changes detected in new content for title: ${title}`);
       const text = `No changes detected in new content for title: ${title}`;
